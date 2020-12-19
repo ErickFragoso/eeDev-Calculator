@@ -1,0 +1,51 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #00AAFF, #00EAF0);
+}
+
+.calculadora-cuadricula {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+}
+
+.calculadora-cuadricula>button {
+    cursor: pointer;
+    font-size: 40px;
+    border: 1px solid #00EAF0;
+    outline: none;
+    background-color: rgba(0, 170, 255, 0.082);
+}
+
+.output {
+    grid-column: 1 / -1;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.output .display {
+    background-color: rgb(54, 133, 165);
+    color: white;
+    font-size: 40px;
+    text-align: right;
+    height: 100px;
+    width: 370px;
+}
+
+.resul {
+    grid-column: 1 / -1;
+    color: rgb(0, 0, 0);
+    font-size: large;
+    text-align: center;
+    align-items: center;
+    height: 100px;
+}
+
+.calculadora-cuadricula>button:hover {
+    background-color: rgba(153, 231, 255, 0.397);
+}
